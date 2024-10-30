@@ -1,0 +1,396 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* global */
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat-Light"),
+    url("../fonts/Montserrat-Light.woff2") format("woff2"),
+    url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat-Regular"),
+    url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat-Bold"),
+    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  src: local("FiraSans-Light"),
+    url("../fonts/FiraSans-Light.woff2") format("woff2"),
+    url("../fonts/FiraSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  src: local("FiraSans-Regular"),
+    url("../fonts/FiraSans-Regular.woff2") format("woff2"),
+    url("../fonts/FiraSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  src: local("FiraSans-Bold"),
+    url("../fonts/FiraSans-Bold.woff2") format("woff2"),
+    url("../fonts/FiraSans-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tahoma";
+  src: local("Tahoma"),
+    url("../fonts/Tahoma.woff2") format("woff2"),
+    url("../fonts/Tahoma.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family: "Fira Sans", sans-serif;
+  --second-family: "Montserrat", sans-serif;
+  --third-family: "Tahoma", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.input-reset {
+  border: none;
+}
+
+.container {
+  margin: 0 auto;
+  margin-bottom: 48px;
+  max-width: 984px;
+}
+
+.second-title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 123%;
+  color: #363a47;
+}
+
+.thrid-title {
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 137%;
+  color: #363a47;
+}
+
+
+.text {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: #363a47;
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99998;
+  background-color: rgba(54, 58, 71, 0.7);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  animation-name: showModal;
+  animation-duration: 0.4s;
+}
+
+.modal__box {
+  position: relative;
+  max-width: 630px;
+  padding: 24px;
+  border-radius: 8px;
+  z-index: 1;
+  box-shadow: 0 16px 24px 0 rgba(96, 97, 112, 0.16), 0 2px 8px 0 rgba(40, 41, 61, 0.04);
+  background-color: #fff;
+  animation-name: showModalContent;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+.modal.open {
+  visibility: visible;
+}
+
+@keyframes showModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showModalContent {
+  from {
+    margin-bottom: -1000px;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+
+.modal__btn {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 24px;
+  max-width: 70%;
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 123%;
+  color: #363a47;
+}
+
+.modal__text {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 137%;
+  color: #363a47;
+}
+
+.modal__svg {
+  display: none;
+}
+
+/* HEADER */
+
+.header__container {
+  padding: 18px 48px;
+  background-image: url('../img/banner.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header__popup {
+  display: flex;
+  align-items: center;
+}
+
+.header__title {
+  margin: 0;
+  margin-bottom: 8px;
+  max-width: 75%;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 125%;
+  color: #363a47;
+}
+
+.header__link {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 115%;
+  color: #1390df;
+}
+
+.header__svg {
+  margin-right: 4px;
+}
+
+/* REVIEW */
+
+.review__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review__cell {
+  max-width: calc(100% / 4 - 18px);
+}
+
+.review__text {
+  margin: 0;
+  margin-top: 9px;
+  max-width: 96%;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 129%;
+  color: #363a47;
+}
+
+/* BANNER */
+
+.banner__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 103px;
+  background: #f1f3f9;
+  border-radius: 8px;
+}
+
+.banner__slogan {
+  margin: 0;
+  margin-right: 15px;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 123%;
+  color: #363a47;
+}
+
+.banner__button {
+  border-radius: 6px;
+  padding: 0px 20px;
+  width: 158px;
+  height: 42px;
+  background: #da1f2a;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 137%;
+  text-align: center;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.banner__button:focus {
+  border: 2px solid #ea8d93;
+  border-radius: 6px;
+  padding: 6px 8px;
+  background: #c53038;
+}
+
+.banner__button:hover {
+  border-radius: 6px;
+  padding: 6px 8px;
+  background: #bc1b24;
+}
+
+.banner__button:active {
+  border-radius: 6px;
+  padding: 6px 8px;
+  background: #c53038;
+}
+
+
+
+/* QUESTION */
+
+.question__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.question__cell {
+  padding: 26px;
+  max-width: calc(100% / 3 - 12px);
+  border-radius: 8px;
+  background: #f1f3f9;
+}
+
+.question__svg {
+  margin-bottom: 12px;
+}
+
+/* FAQ */
+
+.faq__cell {
+  margin-bottom: 12px;
+  padding: 14px;
+  border-radius: 6px;
+  background: #f9fbff;
+}
+
+.faq__find {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.faq__item {
+  margin-left: 20px;
+}
+
+.faq__text {
+  margin-bottom: 5px;
+}
+
+/* FOOTER */
+
+.footer__container {
+  margin-bottom: 0;
+}

@@ -1,0 +1,126 @@
+@media (max-width: 376px) {
+
+  .container {
+    margin: 24px;
+  }
+
+  .header__title {
+    margin: 0;
+    margin-bottom: 8px;
+    max-width: 100%;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 136%;
+    color: #363a47;
+  }
+
+  .header__container {
+    margin: 0;
+    padding-top: 190px;
+    background-image: url('../img/banner-mobile.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-color: #f1f3f9;
+  }
+
+  .header__link {
+    max-width: 75%;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 115%;
+    color: #1390df;
+  }
+
+  .review__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .review__cell {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .review__text {
+    margin-top: 0;
+    max-width: 60%;
+    font-weight: 600;
+  }
+
+  .banner__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .banner__slogan {
+    margin: 0;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 137%;
+  }
+
+  .banner__button {
+    border-radius: 6px;
+    padding: 0px 20px;
+    width: 286px;
+    height: 42px;
+  }
+
+  .question__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .question__cell {
+    margin-bottom: 12px;
+    max-width: 100%;
+  }
+
+  .faq__mini-title {
+    max-width: 90%;
+  }
+
+  .modal {
+    align-items: end;
+    justify-content: center;
+    overflow-y: hidden;
+  }
+
+  .modal__box {
+    padding-top: 10px;
+    max-height: 75vh;
+    overflow-y: scroll;
+  }
+
+  .modal__btn {
+    visibility: hidden;
+    overflow-y: auto;
+  }
+
+  .modal__title {
+    max-width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 122%;
+    letter-spacing: 0.03em;
+  }
+
+  .modal__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .modal__svg {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+}
